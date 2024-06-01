@@ -1,0 +1,40 @@
+.addPhoto input[type="file"] {
+  display: none;
+}
+
+.addPhoto {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+.addPhoto p {
+  text-align: center;
+  color: #ffffff !important;
+}
+
+.addPhoto label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.addPhoto label img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+.addPhoto label :first-child {
+  font-size: 30px;
+}

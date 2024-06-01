@@ -1,0 +1,16 @@
+.sectionTitle {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.viewMore {
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.viewMore:hover {
+  color: var(--secondary);
+}

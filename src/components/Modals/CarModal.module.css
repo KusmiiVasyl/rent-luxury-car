@@ -1,0 +1,51 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+  transition: 0.3s;
+}
+
+.modal :is(.close, .content) {
+  width: min(600px, 100% - 50px);
+  margin-inline: auto;
+}
+
+.modal .close {
+  display: flex;
+  justify-content: end;
+  font-size: 2rem;
+  padding: 0 0 10px 0;
+}
+
+.modal .close span {
+  color: var(--secondary);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal .close span:hover {
+  color: #c4eaf7;
+}
+
+.modal .content {
+  height: 85vh;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  border: 8px solid var(--bgColor);
+  background-color: var(--bgColor);
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.15),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+  font-style: italic;
+  overflow: auto;
+  scrollbar-color: var(--secondary) var(--bgColor);
+  scrollbar-width: thin;
+}

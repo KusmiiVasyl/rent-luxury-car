@@ -1,0 +1,117 @@
+.carCard {
+  position: relative;
+  padding: 25px 20px;
+  margin-bottom: 25px;
+  width: auto;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background: var(--bgColor);
+  box-shadow: var(--boxShadow);
+}
+
+.carCard img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+/* #region Like $ Add to garage */
+.carCard :where(.like, .addToGarage) {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.carCard .like {
+  top: 24px;
+  right: 19px;
+  background: var(--bgColor);
+  padding: 5px;
+  border-radius: 0 0 0 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.carCard .addToGarage {
+  bottom: 0;
+  right: 0;
+  background: var(--secondary);
+  border-radius: 20px 0 20px 0;
+  color: var(--bgColor);
+  cursor: pointer;
+}
+
+.carCard .addToGarage:hover {
+  background: var(--bgColor);
+  color: var(--secondary);
+}
+
+.carCard .like.active {
+  color: #ec1d1d;
+}
+
+.carCard .carPrice{
+  position: absolute;
+  right: 50%;
+  transform: translateX(calc(50% - 20px));
+  bottom: 5px;
+  color: #6cfb70;
+  font-size: 1.1rem;
+  font-style: italic;
+} 
+/* #endregion */
+
+/* #region Car details */
+.carCard .carDetails {
+  color: #ffffff;
+  font-style: italic;
+  text-align: center;
+}
+
+.carCard .carDetails .carBrand {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.carCard .carDetails .carModel {
+  text-transform: capitalize;
+}
+
+.carCard .carDetails .highlight{
+  background-color: #7a640d;
+}
+
+.carCard .carDetails .carCharacteristics {
+  text-align: start;
+  font-style: normal;
+}
+
+.carCard .carDetails .carCharacteristics h6 {
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color:#4dffff;
+}
+
+.carCard .carDetails .carCharacteristics p {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.carCard .carDetails .carCharacteristics p span {
+  text-transform: lowercase;
+  color: #ffcc00;
+  margin-left: 8px;
+  font-style: italic;
+}
+/* #endregion */
